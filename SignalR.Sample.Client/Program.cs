@@ -17,7 +17,7 @@
                     o.SetMinimumLevel(LogLevel.Debug);
                     o.AddConsole();
                 })
-                .WithUrl(ENDPOINT, o => o.Transports = HttpTransportType.WebSockets)
+                .WithUrl(ENDPOINT, o => o.Transports = HttpTransportType.LongPolling)
                 .Build();
 	
             conn.Closed += e => {
